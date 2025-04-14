@@ -1,0 +1,1 @@
+{'bars': {'MSFT': [{'c': 160.62, 'h': 160.73, 'l': 158.33, 'n': 175506, 'o': 158.78, 't': '2020-01-02T05:00:00Z', 'v': 25472631, 'vw': 159.81551}]}, 'next_page_token': 'TVNGVHxEfDE1Nzc5NDEyMDAwMDAwMDAwMDA='}
