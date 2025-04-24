@@ -1,14 +1,13 @@
 import sqlite3
 
-def main():
-    #Opens connection to db and inits cursor
-    conn = sqlite3.connect('stock_data.db')  
-    cursor = conn.cursor()
 
-    # Enable foreign key support (needed in SQLite)
-    cursor.execute("PRAGMA foreign_keys = ON;")
-    
-    return cursor
+#Opens connection to db and inits cursor
+conn = sqlite3.connect('stock_data.db')  
+cursor = conn.cursor()
+
+# Enable foreign key support (needed in SQLite)
+cursor.execute("PRAGMA foreign_keys = ON;")
+cr_StockTable()
 
 
 def cr_StockTable(cursor):

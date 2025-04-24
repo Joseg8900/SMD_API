@@ -1,13 +1,16 @@
 from get_data import get
-from database import *
+import json
 
-tickr:str = 'MSFT'
-stocks: dict = (get(tickr))
-#print( stocks["bars"]["MSFT"])
+#with open('stocks.txt',"r") as file:
 
 
+# Open and loads the JSON file.
+stock: dict = {}
+with open('data1.json', 'r') as file:
+    stock = json.load(file)
 
-# Now, 'stock' is a dictionary
-#print("DateTime,Open,High,Low,Close,Volume,Count,WeightedAverage")
-#for entry in stock["bars"]["MSFT"]:
-#    print(f"{entry['t'][0:10]},{entry['o']},{entry['h']},{entry['l']},{entry['c']},{entry['v']},{entry['n']},{entry['vw']}")
+
+#Takes ticker str and creates a csv file with the fields.
+print("DateTime,Open,Close,High,Low")
+for field in stock[Ticker]:
+    print(f"{field['t'][0:10]},{field['o']},{field['c']},{field['h']},{field['l']}")
